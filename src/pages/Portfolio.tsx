@@ -6,8 +6,10 @@ import constructionSite from "@/assets/construction-site.jpg";
 import entertainment from "@/assets/entertainment.jpg";
 import tradingPlatform from "@/assets/trading-platform.jpg";
 import scholarsGite from "@/assets/scholars-site.jpg";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const Portfolio = () => {
+  useScrollReveal();
   const projects = [
     {
       title: "MRDGN Group",
@@ -58,7 +60,7 @@ const Portfolio = () => {
       <Header />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16" data-aos="fade-up">
             <h1 className="text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
               My Portfolio
             </h1>
@@ -71,14 +73,15 @@ const Portfolio = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
-              <PortfolioCard
-                key={index}
-                title={project.title}
-                description={project.description}
-                url={project.url}
-                image={project.image}
-                category={project.category}
-              />
+              <div key={index} data-aos="fade-up" data-aos-delay={index * 100}>
+                <PortfolioCard
+                  title={project.title}
+                  description={project.description}
+                  url={project.url}
+                  image={project.image}
+                  category={project.category}
+                />
+              </div>
             ))}
           </div>
         </div>

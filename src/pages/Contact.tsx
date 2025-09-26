@@ -1,37 +1,18 @@
 import Header from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { Mail, MessageSquare, Send } from "lucide-react";
-import { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
+import { Mail, MessageSquare } from "lucide-react";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: ""
-  });
-  const { toast } = useToast();
+  useScrollReveal();
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Here you would typically send the form data to your backend
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    });
-    setFormData({ name: "", email: "", subject: "", message: "" });
+  const handleEmailClick = () => {
+    window.location.href = "mailto:ufuomaonakpoyan@gmail.com";
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({
-      ...prev,
-      [e.target.name]: e.target.value
-    }));
+  const handleWhatsAppClick = () => {
+    window.open("https://wa.me/2348144933788", "_blank");
   };
 
   return (
@@ -40,7 +21,7 @@ const Contact = () => {
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
+            <div className="text-center mb-16" data-aos="fade-up">
               <h1 className="text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
                 Let's Work Together
               </h1>
@@ -50,98 +31,69 @@ const Contact = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {/* Contact Info */}
-              <div className="lg:col-span-1 space-y-6">
-                <Card className="bg-card border-border">
-                  <CardContent className="p-6">
-                    <div className="flex items-center space-x-4 mb-4">
-                      <Mail className="h-6 w-6 text-primary" />
-                      <h3 className="text-lg font-semibold">Email Me</h3>
+            <div className="max-w-4xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {/* Email Contact */}
+                <Card className="bg-card border-border group hover:shadow-glow transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                  <CardContent className="p-8 text-center">
+                    <div className="mb-6">
+                      <Mail className="h-16 w-16 text-primary mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                      <h3 className="text-2xl font-semibold mb-3">Email Me</h3>
+                      <p className="text-muted-foreground mb-6">
+                        Drop me a line and I'll get back to you within 24 hours.
+                      </p>
+                      <p className="text-sm text-muted-foreground mb-6">
+                        ufuomaonakpoyan@gmail.com
+                      </p>
                     </div>
-                    <p className="text-muted-foreground">
-                      Drop me a line and I'll get back to you within 24 hours.
-                    </p>
+                    <Button 
+                      variant="hero" 
+                      size="lg" 
+                      className="w-full"
+                      onClick={handleEmailClick}
+                    >
+                      <Mail className="h-5 w-5 mr-2" />
+                      Send Email
+                    </Button>
                   </CardContent>
                 </Card>
 
-                <Card className="bg-card border-border">
-                  <CardContent className="p-6">
-                    <div className="flex items-center space-x-4 mb-4">
-                      <MessageSquare className="h-6 w-6 text-primary" />
-                      <h3 className="text-lg font-semibold">Let's Chat</h3>
+                {/* WhatsApp Contact */}
+                <Card className="bg-card border-border group hover:shadow-glow transition-all duration-300" data-aos="fade-up" data-aos-delay="400">
+                  <CardContent className="p-8 text-center">
+                    <div className="mb-6">
+                      <MessageSquare className="h-16 w-16 text-primary mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                      <h3 className="text-2xl font-semibold mb-3">WhatsApp Me</h3>
+                      <p className="text-muted-foreground mb-6">
+                        Chat with me directly for quick questions or project discussions.
+                      </p>
+                      <p className="text-sm text-muted-foreground mb-6">
+                        +234 814 493 3788
+                      </p>
                     </div>
-                    <p className="text-muted-foreground">
-                      Whether it's a quick question or a detailed project discussion.
-                    </p>
+                    <Button 
+                      variant="hero" 
+                      size="lg" 
+                      className="w-full"
+                      onClick={handleWhatsAppClick}
+                    >
+                      <MessageSquare className="h-5 w-5 mr-2" />
+                      Chat on WhatsApp
+                    </Button>
                   </CardContent>
                 </Card>
               </div>
 
-              {/* Contact Form */}
-              <div className="lg:col-span-2">
+              {/* Additional Info */}
+              <div className="mt-16 text-center" data-aos="fade-up" data-aos-delay="600">
                 <Card className="bg-card border-border">
                   <CardContent className="p-8">
-                    <form onSubmit={handleSubmit} className="space-y-6">
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                          <Label htmlFor="name">Name</Label>
-                          <Input
-                            id="name"
-                            name="name"
-                            value={formData.name}
-                            onChange={handleChange}
-                            required
-                            className="mt-2"
-                            placeholder="Your name"
-                          />
-                        </div>
-                        <div>
-                          <Label htmlFor="email">Email</Label>
-                          <Input
-                            id="email"
-                            name="email"
-                            type="email"
-                            value={formData.email}
-                            onChange={handleChange}
-                            required
-                            className="mt-2"
-                            placeholder="your.email@example.com"
-                          />
-                        </div>
-                      </div>
-
-                      <div>
-                        <Label htmlFor="subject">Subject</Label>
-                        <Input
-                          id="subject"
-                          name="subject"
-                          value={formData.subject}
-                          onChange={handleChange}
-                          required
-                          className="mt-2"
-                          placeholder="What's this about?"
-                        />
-                      </div>
-
-                      <div>
-                        <Label htmlFor="message">Message</Label>
-                        <Textarea
-                          id="message"
-                          name="message"
-                          value={formData.message}
-                          onChange={handleChange}
-                          required
-                          className="mt-2 min-h-32"
-                          placeholder="Tell me about your project..."
-                        />
-                      </div>
-
-                      <Button type="submit" variant="hero" size="lg" className="w-full">
-                        <Send className="h-5 w-5 mr-2" />
-                        Send Message
-                      </Button>
-                    </form>
+                    <h3 className="text-xl font-semibold mb-4">Let's Discuss Your Project</h3>
+                    <p className="text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+                      Whether you need a complete web application, want to improve an existing site, 
+                      or have questions about development - I'm here to help. I respond to all 
+                      inquiries within 24 hours and offer free consultations for new projects.
+                    </p>
                   </CardContent>
                 </Card>
               </div>

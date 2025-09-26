@@ -3,8 +3,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle } from "lucide-react";
 import ufuomaProfile from "@/assets/ufuoma-profile.png";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const About = () => {
+  useScrollReveal();
   const technologies = [
     "React", "TypeScript", "Next.js", "Node.js", "Python", "PostgreSQL",
     "MongoDB", "AWS", "Docker", "Kubernetes", "GraphQL", "REST APIs",
@@ -26,7 +28,7 @@ const About = () => {
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-6">
           {/* Hero Section */}
-          <div className="max-w-4xl mx-auto text-center mb-16">
+          <div className="max-w-4xl mx-auto text-center mb-16" data-aos="fade-up">
             <img
               src={ufuomaProfile}
               alt="Ufuoma O."
@@ -43,7 +45,7 @@ const About = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
             {/* Story */}
-            <Card className="bg-card border-border">
+            <Card className="bg-card border-border" data-aos="fade-right">
               <CardContent className="p-8">
                 <h2 className="text-3xl font-semibold mb-6">My Story</h2>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
@@ -68,7 +70,7 @@ const About = () => {
             </Card>
 
             {/* Achievements */}
-            <Card className="bg-card border-border">
+            <Card className="bg-card border-border" data-aos="fade-left">
               <CardContent className="p-8">
                 <h2 className="text-3xl font-semibold mb-6">Key Achievements</h2>
                 <div className="space-y-4">
@@ -84,7 +86,7 @@ const About = () => {
           </div>
 
           {/* Technologies */}
-          <Card className="bg-card border-border">
+          <Card className="bg-card border-border" data-aos="fade-up">
             <CardContent className="p-8">
               <h2 className="text-3xl font-semibold mb-8 text-center">Technologies & Tools</h2>
               <div className="flex flex-wrap gap-3 justify-center">

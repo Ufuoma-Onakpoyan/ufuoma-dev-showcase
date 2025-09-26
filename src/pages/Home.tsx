@@ -65,7 +65,7 @@ const Home = () => {
               increase revenue, and provide exceptional user experiences. From startups to established 
               enterprises, I deliver modern web applications that transform your business.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="500">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="500">
               <Button variant="outline" size="lg" className="bg-transparent border-white text-white hover:bg-white hover:text-primary" asChild>
                 <Link to="/portfolio">View My Work</Link>
               </Button>

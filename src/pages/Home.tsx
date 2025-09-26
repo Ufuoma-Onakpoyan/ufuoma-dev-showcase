@@ -60,7 +60,7 @@ const Home = () => {
             <h2 className="text-3xl font-semibold mb-6 text-muted-foreground" data-aos="fade-up" data-aos-delay="300">
               Professional Web Developer & Business Solutions Expert
             </h2>
-            <p className="text-xl mb-8 max-w-2xl leading-relaxed" data-aos="fade-up" data-aos-delay="400">
+            <p className="text-xl mb-8 max-w-2xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="400">
               I help businesses succeed online with custom web solutions that drive growth, 
               increase revenue, and provide exceptional user experiences. From startups to established 
               enterprises, I deliver modern web applications that transform your business.

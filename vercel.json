@@ -36,10 +36,5 @@
         }
       ]
     }
-  ],
-  "functions": {
-    "src/assets/*": {
-      "maxDuration": 10
-    }
-  }
+  ]
 }

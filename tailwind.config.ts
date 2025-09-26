@@ -62,6 +62,9 @@ export default {
         "gradient-primary": "var(--gradient-primary)",
         "gradient-secondary": "var(--gradient-secondary)",
         "gradient-hero": "var(--gradient-hero)",
+        "gradient-basic": "var(--gradient-basic)",
+        "gradient-intermediate": "var(--gradient-intermediate)",
+        "gradient-expert": "var(--gradient-expert)",
       },
       boxShadow: {
         "glow": "var(--shadow-glow)",

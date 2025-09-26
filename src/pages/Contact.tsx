@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Mail, MessageSquare } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const Contact = () => {
@@ -62,7 +63,7 @@ const Contact = () => {
                 <Card className="bg-card border-border group hover:shadow-glow transition-all duration-300" data-aos="fade-up" data-aos-delay="400">
                   <CardContent className="p-8 text-center">
                     <div className="mb-6">
-                      <MessageSquare className="h-16 w-16 text-primary mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                      <FaWhatsapp className="h-16 w-16 text-green-500 mx-auto mb-4 group-hover:scale-110 transition-transform" />
                       <h3 className="text-2xl font-semibold mb-3">WhatsApp Me</h3>
                       <p className="text-muted-foreground mb-6">
                         Chat with me directly for quick questions or project discussions.
@@ -74,10 +75,10 @@ const Contact = () => {
                     <Button 
                       variant="hero" 
                       size="lg" 
-                      className="w-full"
+                      className="w-full bg-green-600 hover:bg-green-700 text-white"
                       onClick={handleWhatsAppClick}
                     >
-                      <MessageSquare className="h-5 w-5 mr-2" />
+                      <FaWhatsapp className="h-5 w-5 mr-2" />
                       Chat on WhatsApp
                     </Button>
                   </CardContent>
@@ -90,9 +91,10 @@ const Contact = () => {
                   <CardContent className="p-8">
                     <h3 className="text-xl font-semibold mb-4">Let's Discuss Your Project</h3>
                     <p className="text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-                      Whether you need a complete web application, want to improve an existing site, 
-                      or have questions about development - I'm here to help. I respond to all 
-                      inquiries within 24 hours and offer free consultations for new projects.
+                      Whether you need a complete business website, e-commerce platform, custom web application, 
+                      or want to improve your existing online presence - I'm here to help. I offer free consultations 
+                      for new projects and respond to all inquiries within 24 hours. Let's discuss how we can transform 
+                      your business with professional web solutions.
                     </p>
                   </CardContent>
                 </Card>

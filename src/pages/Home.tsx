@@ -8,26 +8,26 @@ import Header from "@/components/Header";
 
 const Home = () => {
   useScrollReveal();
-  const skills = [
+  const businessSolutions = [
+    {
+      icon: <Globe className="h-8 w-8" />,
+      title: "Business Websites",
+      description: "Professional websites that convert visitors into customers and drive business growth"
+    },
     {
       icon: <Code className="h-8 w-8" />,
-      title: "Frontend Development",
-      description: "Modern React, TypeScript, and cutting-edge web technologies"
+      title: "E-commerce Solutions",
+      description: "Complete online stores with payment processing, inventory management, and analytics"
     },
     {
       icon: <Smartphone className="h-8 w-8" />,
-      title: "Mobile Development",
-      description: "Cross-platform mobile applications with native performance"
-    },
-    {
-      icon: <Globe className="h-8 w-8" />,
       title: "Web Applications",
-      description: "Full-stack web solutions with scalable architecture"
+      description: "Custom web apps that streamline operations and improve business efficiency"
     },
     {
       icon: <Zap className="h-8 w-8" />,
-      title: "Performance Optimization",
-      description: "Lightning-fast applications with optimal user experience"
+      title: "Digital Transformation",
+      description: "Modernize your business processes with cutting-edge technology solutions"
     }
   ];
 
@@ -53,24 +53,25 @@ const Home = () => {
                 className="w-32 h-32 rounded-full mx-auto mb-6 shadow-glow border-4 border-primary/20"
               />
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent" data-aos="fade-up" data-aos-delay="200">
-              Ufuoma O.
+            <h1 className="text-6xl font-bold mb-6 leading-tight" data-aos="fade-up" data-aos-delay="200">
+              Hi, I'm <span className="bg-gradient-primary bg-clip-text text-transparent">Ufuoma</span>
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-4" data-aos="fade-up" data-aos-delay="300">
-              Software Engineer & Web Developer
+            <h2 className="text-3xl font-semibold mb-6 text-muted-foreground" data-aos="fade-up" data-aos-delay="300">
+              Professional Web Developer & Business Solutions Expert
+            </h2>
+            <p className="text-xl mb-8 max-w-2xl leading-relaxed" data-aos="fade-up" data-aos-delay="400">
+              I help businesses succeed online with custom web solutions that drive growth, 
+              increase revenue, and provide exceptional user experiences. From startups to established 
+              enterprises, I deliver modern web applications that transform your business.
             </p>
-            <p className="text-lg text-muted-foreground/80 mb-12 max-w-2xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="400">
-              Crafting exceptional digital experiences through innovative web development 
-              and cutting-edge software engineering solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="500">
+            <div className="flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="500">
               <Button variant="hero" size="lg" asChild>
-                <Link to="/portfolio">
-                  View My Work
-                  <ArrowRight className="h-5 w-5" />
-                </Link>
+                <Link to="/services">View Services & Pricing</Link>
               </Button>
-              <Button variant="hero" size="lg" asChild>
+              <Button variant="outline" size="lg" className="bg-transparent border-white text-white hover:bg-white hover:text-primary" asChild>
+                <Link to="/portfolio">View My Work</Link>
+              </Button>
+              <Button variant="outline" size="lg" className="bg-transparent border-white text-white hover:bg-white hover:text-primary" asChild>
                 <Link to="/contact">Get In Touch</Link>
               </Button>
             </div>
@@ -78,17 +79,17 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Skills Section */}
+      {/* Business Solutions Section */}
       <section className="py-20 bg-card">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16" data-aos="fade-up">
-            <h2 className="text-4xl font-bold mb-4">What I Do Best</h2>
+            <h2 className="text-4xl font-bold mb-4">Business Solutions That Drive Results</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Specialized in creating modern, scalable, and user-friendly digital solutions
+              Specialized services designed to increase your revenue, improve efficiency, and accelerate growth
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {skills.map((skill, index) => (
+            {businessSolutions.map((solution, index) => (
               <div
                 key={index}
                 className="p-6 rounded-xl bg-background border border-border hover:shadow-glow transition-all duration-300 group"
@@ -96,10 +97,10 @@ const Home = () => {
                 data-aos-delay={index * 100}
               >
                 <div className="text-primary mb-4 group-hover:scale-110 transition-transform">
-                  {skill.icon}
+                  {solution.icon}
                 </div>
-                <h3 className="text-xl font-semibold mb-3">{skill.title}</h3>
-                <p className="text-muted-foreground">{skill.description}</p>
+                <h3 className="text-xl font-semibold mb-3">{solution.title}</h3>
+                <p className="text-muted-foreground">{solution.description}</p>
               </div>
             ))}
           </div>
@@ -110,14 +111,19 @@ const Home = () => {
       <section className="py-20 bg-gradient-primary">
         <div className="container mx-auto px-6 text-center" data-aos="fade-up">
           <h2 className="text-4xl font-bold mb-6 text-primary-foreground">
-            Ready to Build Something Amazing?
+            Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-            Let's collaborate and turn your ideas into reality with cutting-edge technology
+            Join successful businesses that have increased their revenue and growth with our web solutions
           </p>
-          <Button variant="hero" size="lg" asChild>
-            <Link to="/contact">Get In Touch</Link>
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button variant="secondary" size="lg" asChild>
+              <Link to="/services">View Pricing & Packages</Link>
+            </Button>
+            <Button variant="outline" size="lg" className="bg-transparent border-white text-white hover:bg-white hover:text-primary" asChild>
+              <Link to="/contact">Get Free Consultation</Link>
+            </Button>
+          </div>
         </div>
       </section>
     </div>

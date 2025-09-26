@@ -1,5 +1,6 @@
 import PortfolioCard from "@/components/PortfolioCard";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import mrdgnGroup from "@/assets/mrdgn-group.jpg";
 import mansaLuxury from "@/assets/mansa-luxury.jpg";
 import constructionSite from "@/assets/construction-site.jpg";
@@ -86,6 +87,7 @@ const Portfolio = () => {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 };

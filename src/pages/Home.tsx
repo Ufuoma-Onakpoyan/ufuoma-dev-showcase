@@ -5,6 +5,7 @@ import ufuomaProfile from "@/assets/ufuoma-profile.png";
 import heroBg from "@/assets/hero-bg.jpg";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const Home = () => {
   useScrollReveal();
@@ -65,14 +66,34 @@ const Home = () => {
               enterprises, I deliver modern web applications that transform your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="500">
-              <Button variant="hero" size="lg" asChild>
-                <Link to="/services">View Services & Pricing</Link>
-              </Button>
               <Button variant="outline" size="lg" className="bg-transparent border-white text-white hover:bg-white hover:text-primary" asChild>
                 <Link to="/portfolio">View My Work</Link>
               </Button>
               <Button variant="outline" size="lg" className="bg-transparent border-white text-white hover:bg-white hover:text-primary" asChild>
                 <Link to="/contact">Get In Touch</Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Centralized CTA Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          <div className="flex justify-center" data-aos="fade-up">
+            <div className="bg-gradient-glass backdrop-blur-sm border border-white/10 rounded-2xl p-12 text-center shadow-glass max-w-2xl">
+              <h3 className="text-3xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
+                Ready to Transform Your Business?
+              </h3>
+              <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
+                Choose from our affordable packages designed to help your business succeed online. 
+                Professional web solutions starting at just $200.
+              </p>
+              <Button variant="hero" size="lg" className="transform hover:scale-105 transition-all duration-300" asChild>
+                <Link to="/services">
+                  View Services & Pricing
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
               </Button>
             </div>
           </div>
@@ -126,6 +147,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

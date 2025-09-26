@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -12,7 +13,7 @@ const Services = () => {
   const packages = [
     {
       name: "Basic Package",
-      price: "$899",
+      price: "$200",
       icon: <Star className="h-8 w-8" />,
       gradient: "bg-gradient-basic",
       popular: false,
@@ -23,14 +24,12 @@ const Services = () => {
         "Contact forms integration",
         "Basic SEO setup",
         "Social media integration",
-        "Google Analytics setup",
-        "30 days support",
-        "Fast 1-week delivery"
+        "30 days support"
       ]
     },
     {
       name: "Intermediate Package",
-      price: "$2,499",
+      price: "$500",
       icon: <Zap className="h-8 w-8" />,
       gradient: "bg-gradient-intermediate",
       popular: true,
@@ -42,14 +41,13 @@ const Services = () => {
         "E-commerce functionality (up to 50 products)",
         "Advanced SEO optimization",
         "Blog setup and management",
-        "Email marketing integration",
-        "Performance optimization",
-        "60 days support + maintenance"
+        "60 days support + maintenance",
+        "Performance optimization"
       ]
     },
     {
       name: "Expert Package",
-      price: "$4,999",
+      price: "$1,000",
       icon: <Crown className="h-8 w-8" />,
       gradient: "bg-gradient-expert",
       popular: false,
@@ -59,12 +57,8 @@ const Services = () => {
         "Unlimited pages and custom features",
         "Advanced e-commerce (unlimited products)",
         "Custom web applications",
-        "API integrations",
-        "Database design and management",
-        "Multi-language support",
-        "Advanced analytics and reporting",
         "Custom branding and identity",
-        "6 months support + maintenance",
+        "3 months support + maintenance",
         "Priority support and updates"
       ]
     }
@@ -150,7 +144,11 @@ const Services = () => {
             {packages.map((pkg, index) => (
               <Card 
                 key={pkg.name}
-                className={`relative overflow-hidden ${pkg.popular ? 'ring-2 ring-primary scale-105' : ''} hover:shadow-glow transition-all duration-300`}
+                className={`relative overflow-hidden backdrop-blur-sm border-2 transition-all duration-300 hover:shadow-glow hover:scale-105 ${
+                  pkg.popular 
+                    ? 'border-primary bg-gradient-to-br from-primary/10 to-primary/5 shadow-glass scale-105' 
+                    : 'border-border hover:border-primary/50 bg-gradient-glass'
+                }`}
                 data-aos="fade-up"
                 data-aos-delay={index * 200}
               >
@@ -298,6 +296,7 @@ const Services = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

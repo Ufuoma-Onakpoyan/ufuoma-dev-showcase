@@ -25,7 +25,7 @@ const Header = () => {
             <img
               src={ufuomaLogo}
               alt="Ufuoma O. Logo"
-              className="h-10 w-auto"
+              className="h-10 w-auto brightness-0 invert"
             />
           </Link>
 

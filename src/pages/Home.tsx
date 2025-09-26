@@ -43,6 +43,8 @@ const Home = () => {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
+        role="banner"
+        aria-labelledby="hero-heading"
       >
         <div className="absolute inset-0 bg-gradient-hero opacity-90" />
         <div className="relative z-10 container mx-auto px-6 text-center">
@@ -54,13 +56,13 @@ const Home = () => {
                 className="w-32 h-32 rounded-full mx-auto mb-6 shadow-glow border-4 border-primary/20"
               />
             </div>
-            <h1 className="text-6xl font-bold mb-6 leading-tight" data-aos="fade-up" data-aos-delay="200">
+            <h1 id="hero-heading" className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight" data-aos="fade-up" data-aos-delay="200">
               Hi, I'm <span className="bg-gradient-primary bg-clip-text text-transparent">Ufuoma</span>
             </h1>
-            <h2 className="text-3xl font-semibold mb-6 text-muted-foreground" data-aos="fade-up" data-aos-delay="300">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-6 text-muted-foreground" data-aos="fade-up" data-aos-delay="300">
               Professional Web Developer & Business Solutions Expert
             </h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="400">
+            <p className="text-lg sm:text-xl mb-8 max-w-2xl mx-auto leading-relaxed px-4 sm:px-0" data-aos="fade-up" data-aos-delay="400">
               I help businesses succeed online with custom web solutions that drive growth, 
               increase revenue, and provide exceptional user experiences. From startups to established 
               enterprises, I deliver modern web applications that transform your business.
@@ -103,13 +105,13 @@ const Home = () => {
       {/* Business Solutions Section */}
       <section className="py-20 bg-card">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16" data-aos="fade-up">
-            <h2 className="text-4xl font-bold mb-4">Business Solutions That Drive Results</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <div className="text-center mb-12 sm:mb-16" data-aos="fade-up">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 px-4">Business Solutions That Drive Results</h2>
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
               Specialized services designed to increase your revenue, improve efficiency, and accelerate growth
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {businessSolutions.map((solution, index) => (
               <div
                 key={index}

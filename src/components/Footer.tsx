@@ -1,27 +1,28 @@
 import { FaWhatsapp, FaEnvelope, FaLinkedin, FaGithub, FaCode, FaCoffee, FaHeart } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import ufuomaLogo from "@/assets/ufuoma-logo.png";
 
 const Footer = () => {
   return (
     <footer className="bg-gradient-to-t from-background/95 to-background border-t border-border/20 backdrop-blur-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {/* Logo & Description */}
-          <div className="md:col-span-1">
-            <div className="flex items-center mb-4">
+          <div className="lg:col-span-1 sm:col-span-2 text-center sm:text-left">
+            <div className="flex items-center justify-center sm:justify-start mb-4">
               <img 
-                src="/src/assets/ufuoma-logo.png" 
+                src={ufuomaLogo}
                 alt="Ufuoma Logo" 
                 className="h-8 w-auto brightness-0 invert"
               />
             </div>
-            <p className="text-muted-foreground text-sm leading-relaxed">
+            <p className="text-muted-foreground text-sm leading-relaxed max-w-xs mx-auto sm:mx-0">
               Building modern web solutions that help businesses grow and succeed in the digital world.
             </p>
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="text-center sm:text-left">
             <h3 className="text-foreground font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
@@ -53,7 +54,7 @@ const Footer = () => {
           </div>
 
           {/* Services */}
-          <div>
+          <div className="text-center sm:text-left">
             <h3 className="text-foreground font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
               <li className="text-muted-foreground text-sm">Web Development</li>
@@ -65,7 +66,7 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
-          <div>
+          <div className="text-center sm:text-left">
             <h3 className="text-foreground font-semibold mb-4">Get In Touch</h3>
             <ul className="space-y-3">
               <li>
@@ -91,11 +92,19 @@ const Footer = () => {
             </ul>
 
             {/* Social Links */}
-            <div className="flex space-x-4 mt-4">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+            <div className="flex space-x-4 mt-4 justify-center sm:justify-start">
+              <a 
+                href="#" 
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="LinkedIn Profile"
+              >
                 <FaLinkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a 
+                href="#" 
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="GitHub Profile"
+              >
                 <FaGithub className="h-5 w-5" />
               </a>
             </div>
@@ -103,13 +112,13 @@ const Footer = () => {
         </div>
 
         {/* Bottom Section with Fun Detail */}
-        <div className="border-t border-border/20 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-muted-foreground text-sm">
+        <div className="border-t border-border/20 mt-8 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+          <p className="text-muted-foreground text-sm text-center sm:text-left">
             © 2024 Ufuoma Web Solutions. All rights reserved.
           </p>
           
           {/* Fun Detail - Animated with love and coffee */}
-          <div className="flex items-center space-x-1 text-muted-foreground text-sm mt-4 md:mt-0">
+          <div className="flex items-center space-x-1 text-muted-foreground text-sm">
             <span>Coded with</span>
             <FaHeart className="h-3 w-3 text-red-500 animate-pulse" />
             <span>and lots of</span>

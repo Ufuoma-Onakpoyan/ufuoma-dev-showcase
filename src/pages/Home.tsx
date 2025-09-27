@@ -143,7 +143,7 @@ const Home = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-primary relative overflow-hidden">
         <div className="absolute inset-0 glass-nav opacity-20"></div>
-        <div className="container mx-auto px-6 text-center relative z-10 glass-card">
+        <div className="container mx-auto px-6 text-center relative z-10">
           <h2 className="text-4xl font-bold mb-6 text-primary-foreground">
             Ready to Transform Your Business?
           </h2>

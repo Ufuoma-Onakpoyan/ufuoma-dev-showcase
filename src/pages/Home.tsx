@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Code, Smartphone, Globe, Zap } from "lucide-react";
+import { ArrowRight, Code, Smartphone, Globe, Zap, Monitor, Tablet } from "lucide-react";
 import { Link } from "react-router-dom";
 import ufuomaProfile from "@/assets/ufuoma-profile.png";
 import heroBg from "@/assets/hero-bg.jpg";
@@ -16,19 +16,29 @@ const Home = () => {
       description: "Professional websites that convert visitors into customers and drive business growth"
     },
     {
+      icon: <Smartphone className="h-8 w-8" />,
+      title: "Mobile Applications",
+      description: "Native iOS and Android apps that reach customers directly on their mobile devices"
+    },
+    {
       icon: <Code className="h-8 w-8" />,
       title: "E-commerce Solutions",
       description: "Complete online stores with payment processing, inventory management, and analytics"
     },
     {
-      icon: <Smartphone className="h-8 w-8" />,
+      icon: <Monitor className="h-8 w-8" />,
       title: "Web Applications",
       description: "Custom web apps that streamline operations and improve business efficiency"
     },
     {
+      icon: <Tablet className="h-8 w-8" />,
+      title: "Cross-Platform Solutions",
+      description: "Unified experiences across web and mobile platforms with seamless data synchronization"
+    },
+    {
       icon: <Zap className="h-8 w-8" />,
       title: "Digital Transformation",
-      description: "Modernize your business processes with cutting-edge technology solutions"
+      description: "Complete digital ecosystem including websites, mobile apps, and cloud solutions"
     }
   ];
 
@@ -60,12 +70,12 @@ const Home = () => {
               Hi, I'm <span className="bg-gradient-primary bg-clip-text text-transparent">Ufuoma</span>
             </h1>
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-6 text-muted-foreground" data-aos="fade-up" data-aos-delay="300">
-              Professional Web Developer & Business Solutions Expert
+              Full-Stack Web & Mobile App Developer
             </h2>
             <p className="text-lg sm:text-xl mb-8 max-w-2xl mx-auto leading-relaxed px-4 sm:px-0" data-aos="fade-up" data-aos-delay="400">
-              I help businesses succeed online with custom web solutions that drive growth, 
-              increase revenue, and provide exceptional user experiences. From startups to established 
-              enterprises, I deliver modern web applications that transform your business.
+              I help businesses succeed across web and mobile platforms with custom solutions that drive growth, 
+              increase revenue, and provide exceptional user experiences. From responsive websites to native mobile apps, 
+              I deliver complete digital ecosystems that transform your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="500">
               <Button variant="outline" size="lg" className="bg-transparent border-white text-white hover:bg-white hover:text-primary" asChild>
@@ -88,8 +98,8 @@ const Home = () => {
                 Ready to Transform Your Business?
               </h3>
               <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
-                Choose from our affordable packages designed to help your business succeed online. 
-                Professional web solutions starting at just $200.
+                Choose from our affordable packages designed to help your business succeed across web and mobile platforms. 
+                Professional solutions starting at $200 for websites, $1,500 for mobile apps, or $2,000 for complete digital packages.
               </p>
               <Button variant="hero" size="lg" className="transform hover:scale-105 transition-all duration-300" asChild>
                 <Link to="/services">
@@ -111,7 +121,7 @@ const Home = () => {
               Specialized services designed to increase your revenue, improve efficiency, and accelerate growth
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {businessSolutions.map((solution, index) => (
               <div
                 key={index}

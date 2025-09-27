@@ -66,9 +66,9 @@ const Portfolio = () => {
               My Portfolio
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              A showcase of innovative web applications and digital solutions I've crafted 
+              A showcase of innovative web applications, mobile apps, and digital solutions I've crafted 
               for clients across various industries. Each project represents a unique 
-              challenge solved with modern technology and creative thinking.
+              challenge solved with modern web and mobile technologies.
             </p>
           </div>
 

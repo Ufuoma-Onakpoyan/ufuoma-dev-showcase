@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Check, ArrowRight, Star, Zap, Crown } from "lucide-react";
+import { Check, ArrowRight, Star, Zap, Crown, Smartphone, Globe2 } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Link } from "react-router-dom";
 
@@ -32,8 +32,8 @@ const Services = () => {
       price: "$500",
       icon: <Zap className="h-8 w-8" />,
       gradient: "bg-gradient-intermediate",
-      popular: true,
-      description: "Ideal for growing businesses that need advanced features",
+      popular: false,
+      description: "Enhanced websites with mobile-responsive features",
       features: [
         "Everything in Basic package",
         "Advanced responsive design (up to 10 pages)",
@@ -51,7 +51,7 @@ const Services = () => {
       icon: <Crown className="h-8 w-8" />,
       gradient: "bg-gradient-expert",
       popular: false,
-      description: "Complete solution for enterprises and complex projects",
+      description: "Advanced websites with web app capabilities",
       features: [
         "Everything in Intermediate package",
         "Unlimited pages and custom features",
@@ -61,6 +61,42 @@ const Services = () => {
         "3 months support + maintenance",
         "Priority support and updates"
       ]
+    },
+    {
+      name: "Mobile App Package",
+      price: "$1,500",
+      icon: <Smartphone className="h-8 w-8" />,
+      gradient: "bg-gradient-primary",
+      popular: false,
+      description: "Native mobile app development for iOS and Android",
+      features: [
+        "Custom native mobile application",
+        "iOS and Android development",
+        "App store deployment & optimization",
+        "Push notifications",
+        "Offline functionality",
+        "Custom UI/UX design",
+        "90 days support + maintenance",
+        "Performance optimization"
+      ]
+    },
+    {
+      name: "Complete Digital Package",
+      price: "$2,000",
+      icon: <Globe2 className="h-8 w-8" />,
+      gradient: "bg-gradient-hero",
+      popular: true,
+      description: "Ultimate package: Website + Native Mobile App",
+      features: [
+        "Everything in Expert Package",
+        "Native mobile app (iOS & Android)",
+        "Cross-platform data synchronization",
+        "Unified branding across platforms",
+        "App store submission & approval",
+        "Advanced analytics & reporting",
+        "6 months support + maintenance",
+        "Priority support across all platforms"
+      ]
     }
   ];
 
@@ -68,46 +104,46 @@ const Services = () => {
     {
       step: "01",
       title: "Discovery & Planning",
-      description: "We understand your business goals, target audience, and technical requirements through detailed consultation."
+      description: "We understand your business goals, target audience, and technical requirements for web and mobile platforms."
     },
     {
       step: "02",
       title: "Design & Prototype",
-      description: "Create wireframes and visual designs that align with your brand and provide excellent user experience."
+      description: "Create wireframes and visual designs for web and mobile interfaces that align with your brand and provide excellent user experience."
     },
     {
       step: "03",
       title: "Development",
-      description: "Build your website using modern technologies, ensuring performance, security, and scalability."
+      description: "Build your website and/or mobile app using modern technologies, ensuring performance, security, and scalability across all platforms."
     },
     {
       step: "04",
       title: "Testing & Launch",
-      description: "Thorough testing across devices and browsers before launching your website to the world."
+      description: "Thorough testing across devices, browsers, and app stores before launching your digital solutions to the world."
     },
     {
       step: "05",
       title: "Support & Growth",
-      description: "Ongoing maintenance, updates, and optimization to help your business grow online."
+      description: "Ongoing maintenance, updates, and optimization for web and mobile platforms to help your business grow digitally."
     }
   ];
 
   const whyChooseUs = [
     {
-      title: "Business-Focused Approach",
-      description: "We understand that your website is a business investment. Every feature is designed to drive results."
+      title: "Cross-Platform Expertise",
+      description: "We deliver seamless experiences across web and mobile platforms, ensuring consistent branding and functionality."
     },
     {
       title: "Modern Technology Stack",
-      description: "Built with the latest technologies for speed, security, and scalability that grows with your business."
+      description: "Built with the latest technologies for web and native mobile development, ensuring speed, security, and scalability."
     },
     {
-      title: "Proven Track Record",
-      description: "Successfully delivered projects across various industries including real estate, construction, and entertainment."
+      title: "App Store Success",
+      description: "Successfully launched apps on iOS App Store and Google Play Store with optimized listings and approval processes."
     },
     {
-      title: "Ongoing Partnership",
-      description: "We don't just build websites - we partner with you for long-term success with continuous support."
+      title: "Complete Digital Solutions",
+      description: "From websites to mobile apps, we provide comprehensive digital solutions that grow your business across all platforms."
     }
   ];
 
@@ -120,11 +156,11 @@ const Services = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center" data-aos="fade-up">
             <h1 className="text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
-              Professional Web Development Services
+              Web & Mobile App Development Services
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Transform your business with custom web solutions designed to drive growth, 
-              increase revenue, and provide exceptional user experiences.
+              Transform your business with custom web and mobile solutions designed to drive growth, 
+              increase revenue, and provide exceptional user experiences across all platforms.
             </p>
           </div>
         </div>
@@ -140,7 +176,7 @@ const Services = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 max-w-8xl mx-auto">
             {packages.map((pkg, index) => (
               <Card 
                 key={pkg.name}
@@ -257,7 +293,7 @@ const Services = () => {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-4xl mx-auto">
-            {["Real Estate", "Construction", "Entertainment", "Trading & Finance", "Education", "Healthcare", "E-commerce", "Professional Services", "Technology", "Hospitality"].map((industry, index) => (
+            {["Real Estate", "Construction", "Entertainment", "Trading & Finance", "Education", "Healthcare", "E-commerce", "Mobile Apps", "SaaS Platforms", "FinTech", "Professional Services", "Technology", "Hospitality"].map((industry, index) => (
               <Badge 
                 key={industry} 
                 variant="outline" 

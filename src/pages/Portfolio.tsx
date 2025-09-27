@@ -7,10 +7,11 @@ import constructionSite from "@/assets/construction-site.jpg";
 import entertainment from "@/assets/entertainment.jpg";
 import tradingPlatform from "@/assets/trading-platform.jpg";
 import scholarsGite from "@/assets/scholars-site.jpg";
-import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { useGSAP, useMagneticEffect } from "@/hooks/useGSAP";
 
 const Portfolio = () => {
-  useScrollReveal();
+  useGSAP();
+  useMagneticEffect();
   const projects = [
     {
       title: "MRDGN Group",
@@ -61,20 +62,20 @@ const Portfolio = () => {
       <Header />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16" data-aos="fade-up">
-            <h1 className="text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
-              My Portfolio
+          <div className="text-center mb-16 glass-card">
+            <h1 className="text-5xl font-bold mb-6 gradient-text">
+              My 2025 Portfolio
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               A showcase of innovative web applications, mobile apps, and digital solutions I've crafted 
-              for clients across various industries. Each project represents a unique 
-              challenge solved with modern web and mobile technologies.
+              for clients across various industries using modern 2025 technologies. Each project represents a unique 
+              challenge solved with cutting-edge web and mobile technologies.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
-              <div key={index} data-aos="fade-up" data-aos-delay={index * 100}>
+              <div key={index} className="stagger-item">
                 <PortfolioCard
                   title={project.title}
                   description={project.description}

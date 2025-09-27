@@ -12,7 +12,7 @@ interface PortfolioCardProps {
 
 const PortfolioCard = ({ title, description, url, image, category }: PortfolioCardProps) => {
   return (
-    <Card className="group bg-card border-border hover:shadow-glow transition-all duration-300 overflow-hidden">
+    <Card className="group glass-card-intense glass-hover magnetic glow-primary overflow-hidden">
       <div className="aspect-video relative overflow-hidden">
         <img
           src={image}
@@ -23,10 +23,10 @@ const PortfolioCard = ({ title, description, url, image, category }: PortfolioCa
       </div>
       <CardContent className="p-6">
         <div className="flex items-center justify-between mb-3">
-          <span className="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded-full">
+          <span className="text-xs font-medium text-primary glass-card px-2 py-1 rounded-full">
             {category}
           </span>
-          <Globe className="h-4 w-4 text-muted-foreground" />
+          <Globe className="h-4 w-4 text-muted-foreground float-element" />
         </div>
         <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
           {title}
@@ -34,7 +34,7 @@ const PortfolioCard = ({ title, description, url, image, category }: PortfolioCa
         <p className="text-muted-foreground mb-6 leading-relaxed">
           {description}
         </p>
-        <Button variant="hero" size="sm" className="w-full" asChild>
+        <Button variant="hero" size="sm" className="w-full magnetic glow-primary" asChild>
           <a href={url} target="_blank" rel="noopener noreferrer">
             <ExternalLink className="h-4 w-4 mr-2" />
             Visit Website

@@ -4,10 +4,11 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Mail, MessageSquare } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
-import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { useGSAP, useMagneticEffect } from "@/hooks/useGSAP";
 
 const Contact = () => {
-  useScrollReveal();
+  useGSAP();
+  useMagneticEffect();
 
   const handleEmailClick = () => {
     window.location.href = "mailto:ufuomaonakpoyan@gmail.com";
@@ -23,23 +24,23 @@ const Contact = () => {
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16" data-aos="fade-up">
-              <h1 className="text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
-                Let's Work Together
+            <div className="text-center mb-16 glass-card">
+              <h1 className="text-5xl font-bold mb-6 gradient-text">
+                Let's Work Together in 2025
               </h1>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
                 Ready to bring your ideas to life? I'm here to help you create 
-                exceptional digital experiences. Let's discuss your project.
+                exceptional digital experiences with modern 2025 technologies. Let's discuss your project.
               </p>
             </div>
 
             <div className="max-w-4xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* Email Contact */}
-                <Card className="bg-card border-border group hover:shadow-glow transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                <Card className="glass-card-intense glass-hover magnetic glow-primary group stagger-item">
                   <CardContent className="p-8 text-center">
                     <div className="mb-6">
-                      <Mail className="h-16 w-16 text-primary mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                      <Mail className="h-16 w-16 text-primary mx-auto mb-4 group-hover:scale-110 transition-transform float-element" />
                       <h3 className="text-2xl font-semibold mb-3">Email Me</h3>
                       <p className="text-muted-foreground mb-6">
                         Drop me a line and I'll get back to you within 24 hours.
@@ -51,7 +52,7 @@ const Contact = () => {
                     <Button 
                       variant="hero" 
                       size="lg" 
-                      className="w-full"
+                      className="w-full magnetic glow-primary"
                       onClick={handleEmailClick}
                     >
                       <Mail className="h-5 w-5 mr-2" />
@@ -61,10 +62,10 @@ const Contact = () => {
                 </Card>
 
                 {/* WhatsApp Contact */}
-                <Card className="bg-card border-border group hover:shadow-glow transition-all duration-300" data-aos="fade-up" data-aos-delay="400">
+                <Card className="glass-card-intense glass-hover magnetic glow-primary group stagger-item">
                   <CardContent className="p-8 text-center">
                     <div className="mb-6">
-                      <FaWhatsapp className="h-16 w-16 text-green-500 mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                      <FaWhatsapp className="h-16 w-16 text-green-500 mx-auto mb-4 group-hover:scale-110 transition-transform float-element" />
                       <h3 className="text-2xl font-semibold mb-3">WhatsApp Me</h3>
                       <p className="text-muted-foreground mb-6">
                         Chat with me directly for quick questions or project discussions.
@@ -76,7 +77,7 @@ const Contact = () => {
                     <Button 
                       variant="hero" 
                       size="lg" 
-                      className="w-full bg-green-600 hover:bg-green-700 text-white"
+                      className="w-full magnetic bg-green-600 hover:bg-green-700 text-white"
                       onClick={handleWhatsAppClick}
                     >
                       <FaWhatsapp className="h-5 w-5 mr-2" />
@@ -87,13 +88,13 @@ const Contact = () => {
               </div>
 
               {/* Additional Info */}
-              <div className="mt-16 text-center" data-aos="fade-up" data-aos-delay="600">
-                <Card className="bg-card border-border">
+              <div className="mt-16 text-center glass-card">
+                <Card className="glass-card-intense glass-hover magnetic">
                   <CardContent className="p-8">
-                    <h3 className="text-xl font-semibold mb-4">Let's Discuss Your Project</h3>
+                    <h3 className="text-xl font-semibold mb-4">Let's Discuss Your 2025 Project</h3>
                     <p className="text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-                      Whether you need a complete business website, e-commerce platform, custom web application, 
-                      or want to improve your existing online presence - I'm here to help. I offer free consultations 
+                      Whether you need a complete business website, modern e-commerce platform, cutting-edge web application, 
+                      or want to improve your existing online presence with 2025 technologies - I'm here to help. I offer free consultations 
                       for new projects and respond to all inquiries within 24 hours. Let's discuss how we can transform 
                       your business with professional web solutions.
                     </p>

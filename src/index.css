@@ -43,19 +43,40 @@ All colors MUST be HSL.
     --package-intermediate: 221 83% 53%; /* Blue for Intermediate */
     --package-expert: 262 83% 58%; /* Purple for Expert */
 
-    /* Custom design tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(0, 74%, 42%), hsl(0, 74%, 35%));
-    --gradient-secondary: linear-gradient(135deg, hsl(0, 0%, 14.9%), hsl(0, 0%, 7%));
-    --gradient-hero: linear-gradient(135deg, hsl(0, 0%, 0%), hsl(0, 0%, 5%));
-    --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
-    --gradient-basic: linear-gradient(135deg, hsl(142, 76%, 36%), hsl(142, 76%, 30%));
-    --gradient-intermediate: linear-gradient(135deg, hsl(221, 83%, 53%), hsl(221, 83%, 45%));
-    --gradient-expert: linear-gradient(135deg, hsl(262, 83%, 58%), hsl(262, 83%, 50%));
-    --shadow-glow: 0 0 30px hsl(0, 74%, 42% / 0.3);
-    --shadow-card: 0 10px 30px -10px hsl(0, 0%, 5%);
-    --shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    /* Enhanced 2025 Design Tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(0, 74%, 42%), hsl(15, 80%, 50%), hsl(30, 85%, 58%));
+    --gradient-secondary: linear-gradient(135deg, hsl(0, 0%, 14.9%), hsl(240, 10%, 10%), hsl(0, 0%, 7%));
+    --gradient-hero: linear-gradient(135deg, hsl(0, 0%, 0%), hsl(240, 20%, 3%), hsl(0, 0%, 5%));
+    
+    /* Advanced Glassmorphism */
+    --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.08));
+    --gradient-glass-hover: linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.15));
+    --gradient-glass-card: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    --gradient-glass-nav: linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
+    
+    /* Package Gradients */
+    --gradient-basic: linear-gradient(135deg, hsl(142, 76%, 36%), hsl(160, 80%, 40%), hsl(142, 76%, 30%));
+    --gradient-intermediate: linear-gradient(135deg, hsl(221, 83%, 53%), hsl(240, 85%, 60%), hsl(221, 83%, 45%));
+    --gradient-expert: linear-gradient(135deg, hsl(262, 83%, 58%), hsl(280, 85%, 65%), hsl(262, 83%, 50%));
+    
+    /* Enhanced Shadows & Effects */
+    --shadow-glow: 0 0 40px hsl(0, 74%, 42% / 0.4);
+    --shadow-glow-hover: 0 0 60px hsl(0, 74%, 42% / 0.6);
+    --shadow-card: 0 20px 40px -15px hsl(0, 0%, 5%);
+    --shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.4);
+    --shadow-glass-intense: 0 12px 48px 0 rgba(31, 38, 135, 0.6);
+    --shadow-floating: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+    
+    /* Advanced Transitions */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-elastic: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    --transition-magnetic: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    
+    /* Backdrop Filters */
+    --blur-glass: blur(20px);
+    --blur-glass-strong: blur(30px);
+    --blur-nav: blur(16px);
 
     --sidebar-background: 0 0% 98%;
 
@@ -120,5 +141,87 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  /* Glass Effects */
+  .glass-card {
+    background: var(--gradient-glass-card);
+    backdrop-filter: var(--blur-glass);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: var(--shadow-glass);
+  }
+  
+  .glass-card-intense {
+    background: var(--gradient-glass);
+    backdrop-filter: var(--blur-glass-strong);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: var(--shadow-glass-intense);
+  }
+  
+  .glass-nav {
+    background: var(--gradient-glass-nav);
+    backdrop-filter: var(--blur-nav);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  
+  /* Hover Effects */
+  .glass-hover:hover {
+    background: var(--gradient-glass-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-floating);
+  }
+  
+  /* Magnetic Effect */
+  .magnetic {
+    transition: var(--transition-magnetic);
+  }
+  
+  /* Floating Animation */
+  .float-element {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  /* Gradient Text */
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Enhanced Button Styles */
+  .btn-glass {
+    background: var(--gradient-glass);
+    backdrop-filter: var(--blur-glass);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: var(--transition-smooth);
+  }
+  
+  .btn-glass:hover {
+    background: var(--gradient-glass-hover);
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: var(--shadow-glow-hover);
+  }
+  
+  /* Scroll Reveal Utilities */
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  
+  /* Modern Glow Effects */
+  .glow-primary {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+  }
+  
+  .glow-primary:hover {
+    box-shadow: 0 0 40px hsl(var(--primary) / 0.5);
   }
 }

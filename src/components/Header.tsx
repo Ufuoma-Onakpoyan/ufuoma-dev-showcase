@@ -18,7 +18,7 @@ const Header = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 glass-nav">
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-3">
@@ -44,7 +44,7 @@ const Header = () => {
                 {item.name}
               </Link>
             ))}
-            <Button variant="hero" size="sm" asChild>
+            <Button variant="hero" size="sm" className="magnetic glow-primary" asChild>
               <Link to="/contact">Get In Touch</Link>
             </Button>
           </div>
@@ -77,7 +77,7 @@ const Header = () => {
                 {item.name}
               </Link>
             ))}
-            <Button variant="hero" size="sm" className="w-full" asChild>
+            <Button variant="hero" size="sm" className="w-full magnetic glow-primary" asChild>
               <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
                 Get In Touch
               </Link>

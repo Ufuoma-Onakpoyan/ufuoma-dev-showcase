@@ -4,11 +4,12 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Check, ArrowRight, Star, Zap, Crown, Smartphone, Globe2 } from "lucide-react";
-import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { useGSAP, useMagneticEffect } from "@/hooks/useGSAP";
 import { Link } from "react-router-dom";
 
 const Services = () => {
-  useScrollReveal();
+  useGSAP();
+  useMagneticEffect();
 
   const packages = [
     {
@@ -154,13 +155,13 @@ const Services = () => {
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gradient-hero">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center" data-aos="fade-up">
-            <h1 className="text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
-              Web & Mobile App Development Services
+          <div className="max-w-4xl mx-auto text-center glass-card">
+            <h1 className="text-5xl font-bold mb-6 gradient-text">
+              2025 Web & Mobile App Development Services
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Transform your business with custom web and mobile solutions designed to drive growth, 
-              increase revenue, and provide exceptional user experiences across all platforms.
+              Transform your business with cutting-edge web and mobile solutions designed to drive growth, 
+              increase revenue, and provide exceptional user experiences across all platforms in 2025.
             </p>
           </div>
         </div>
@@ -169,10 +170,10 @@ const Services = () => {
       {/* Service Packages */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16" data-aos="fade-up">
-            <h2 className="text-4xl font-bold mb-6">Choose Your Perfect Package</h2>
+          <div className="text-center mb-16 glass-card">
+            <h2 className="text-4xl font-bold mb-6">Choose Your Perfect 2025 Package</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Transparent pricing with everything you need to succeed online
+              Transparent pricing with everything you need to succeed online in 2025
             </p>
           </div>
 
@@ -180,13 +181,11 @@ const Services = () => {
             {packages.map((pkg, index) => (
               <Card 
                 key={pkg.name}
-                className={`relative overflow-hidden backdrop-blur-sm border-2 transition-all duration-300 hover:shadow-glow hover:scale-105 ${
+                className={`relative overflow-hidden magnetic glass-card-intense glass-hover glow-primary stagger-item ${
                   pkg.popular 
-                    ? 'border-primary bg-gradient-to-br from-primary/10 to-primary/5 shadow-glass scale-105' 
-                    : 'border-border hover:border-primary/50 bg-gradient-glass'
+                    ? 'border-primary shadow-glass-intense scale-105' 
+                    : 'border-border hover:border-primary/50'
                 }`}
-                data-aos="fade-up"
-                data-aos-delay={index * 200}
               >
                 {pkg.popular && (
                   <div className="absolute top-0 left-0 right-0 bg-primary text-primary-foreground text-center py-2 text-sm font-semibold">

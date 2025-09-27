@@ -1,14 +1,15 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Code, Smartphone, Globe, Zap, Monitor, Tablet } from "lucide-react";
+import { ArrowRight, Code, Smartphone, Globe, Zap, Monitor, Tablet, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import ufuomaProfile from "@/assets/ufuoma-profile.png";
 import heroBg from "@/assets/hero-bg.jpg";
-import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { useGSAP, useMagneticEffect } from "@/hooks/useGSAP";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const Home = () => {
-  useScrollReveal();
+  useGSAP();
+  useMagneticEffect();
   const businessSolutions = [
     {
       icon: <Globe className="h-8 w-8" />,
@@ -59,29 +60,30 @@ const Home = () => {
         <div className="absolute inset-0 bg-gradient-hero opacity-90" />
         <div className="relative z-10 container mx-auto px-6 text-center">
           <div className="max-w-4xl mx-auto">
-            <div className="mb-8" data-aos="fade-up">
+            <div className="mb-8 hero-profile">
               <img
                 src={ufuomaProfile}
                 alt="Ufuoma O."
-                className="w-32 h-32 rounded-full mx-auto mb-6 shadow-glow border-4 border-primary/20"
+                className="w-32 h-32 rounded-full mx-auto mb-6 shadow-glow border-4 border-primary/20 float-element"
               />
             </div>
-            <h1 id="hero-heading" className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight" data-aos="fade-up" data-aos-delay="200">
-              Hi, I'm <span className="bg-gradient-primary bg-clip-text text-transparent">Ufuoma</span>
+            <h1 id="hero-heading" className="hero-title text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              Hi, I'm <span className="gradient-text">Ufuoma</span>
             </h1>
-            <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-6 text-muted-foreground" data-aos="fade-up" data-aos-delay="300">
-              Full-Stack Web & Mobile App Developer
+            <h2 className="hero-subtitle text-xl sm:text-2xl lg:text-3xl font-semibold mb-6 text-muted-foreground">
+              <Sparkles className="inline h-6 w-6 mr-2 text-primary" />
+              2025 Full-Stack Web & Mobile App Developer
             </h2>
-            <p className="text-lg sm:text-xl mb-8 max-w-2xl mx-auto leading-relaxed px-4 sm:px-0" data-aos="fade-up" data-aos-delay="400">
-              I help businesses succeed across web and mobile platforms with custom solutions that drive growth, 
+            <p className="hero-description text-lg sm:text-xl mb-8 max-w-2xl mx-auto leading-relaxed px-4 sm:px-0">
+              I help businesses succeed across web and mobile platforms with cutting-edge solutions that drive growth, 
               increase revenue, and provide exceptional user experiences. From responsive websites to native mobile apps, 
-              I deliver complete digital ecosystems that transform your business.
+              I deliver complete digital ecosystems that transform your business in 2025.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="500">
-              <Button variant="outline" size="lg" className="bg-transparent border-white text-white hover:bg-white hover:text-primary" asChild>
+            <div className="hero-buttons flex flex-col sm:flex-row gap-4 justify-center">
+              <Button variant="outline" size="lg" className="magnetic glass-card glass-hover border-white/20 text-white" asChild>
                 <Link to="/portfolio">View My Work</Link>
               </Button>
-              <Button variant="outline" size="lg" className="bg-transparent border-white text-white hover:bg-white hover:text-primary" asChild>
+              <Button variant="outline" size="lg" className="magnetic glass-card glass-hover border-white/20 text-white" asChild>
                 <Link to="/contact">Get In Touch</Link>
               </Button>
             </div>
@@ -92,18 +94,18 @@ const Home = () => {
       {/* Centralized CTA Section */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <div className="flex justify-center" data-aos="fade-up">
-            <div className="bg-gradient-glass backdrop-blur-sm border border-white/10 rounded-2xl p-12 text-center shadow-glass max-w-2xl">
-              <h3 className="text-3xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
-                Ready to Transform Your Business?
+          <div className="flex justify-center">
+            <div className="glass-card-intense rounded-3xl p-12 text-center max-w-2xl glass-card stagger-item">
+              <h3 className="text-3xl font-bold mb-6 gradient-text">
+                Ready to Transform Your Business in 2025?
               </h3>
               <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
-                Choose from our affordable packages designed to help your business succeed across web and mobile platforms. 
+                Choose from our modern packages designed to help your business succeed across web and mobile platforms. 
                 Professional solutions starting at $200 for websites, $1,500 for mobile apps, or $2,000 for complete digital packages.
               </p>
-              <Button variant="hero" size="lg" className="transform hover:scale-105 transition-all duration-300" asChild>
+              <Button variant="hero" size="lg" className="magnetic glow-primary" asChild>
                 <Link to="/services">
-                  View Services & Pricing
+                  View 2025 Services & Pricing
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
@@ -115,21 +117,19 @@ const Home = () => {
       {/* Business Solutions Section */}
       <section className="py-20 bg-card">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-12 sm:mb-16" data-aos="fade-up">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4 px-4">Business Solutions That Drive Results</h2>
+          <div className="text-center mb-12 sm:mb-16 glass-card">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 px-4">2025 Business Solutions That Drive Results</h2>
             <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
-              Specialized services designed to increase your revenue, improve efficiency, and accelerate growth
+              Cutting-edge services designed to increase your revenue, improve efficiency, and accelerate growth in 2025
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {businessSolutions.map((solution, index) => (
               <div
                 key={index}
-                className="p-6 rounded-xl bg-background border border-border hover:shadow-glow transition-all duration-300 group"
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
+                className="glass-card p-6 rounded-xl glass-hover magnetic group stagger-item glow-primary"
               >
-                <div className="text-primary mb-4 group-hover:scale-110 transition-transform">
+                <div className="text-primary mb-4 group-hover:scale-110 transition-transform float-element">
                   {solution.icon}
                 </div>
                 <h3 className="text-xl font-semibold mb-3">{solution.title}</h3>
@@ -141,19 +141,20 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-primary">
-        <div className="container mx-auto px-6 text-center" data-aos="fade-up">
+      <section className="py-20 bg-gradient-primary relative overflow-hidden">
+        <div className="absolute inset-0 glass-nav opacity-20"></div>
+        <div className="container mx-auto px-6 text-center relative z-10 glass-card">
           <h2 className="text-4xl font-bold mb-6 text-primary-foreground">
-            Ready to Transform Your Business?
+            Ready to Transform Your Business in 2025?
           </h2>
           <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-            Join successful businesses that have increased their revenue and growth with our web solutions
+            Join successful businesses that have increased their revenue and growth with our modern web solutions
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="secondary" size="lg" asChild>
-              <Link to="/services">View Pricing & Packages</Link>
+            <Button variant="secondary" size="lg" className="magnetic" asChild>
+              <Link to="/services">View 2025 Pricing & Packages</Link>
             </Button>
-            <Button variant="outline" size="lg" className="bg-transparent border-white text-white hover:bg-white hover:text-primary" asChild>
+            <Button variant="outline" size="lg" className="magnetic glass-card glass-hover border-white/20 text-white" asChild>
               <Link to="/contact">Get Free Consultation</Link>
             </Button>
           </div>

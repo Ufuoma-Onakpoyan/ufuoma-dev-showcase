@@ -181,7 +181,7 @@ const Services = () => {
             {packages.map((pkg, index) => (
               <Card 
                 key={pkg.name}
-                className={`relative overflow-hidden magnetic glass-card-intense glass-hover glow-primary stagger-item ${
+                className={`relative overflow-hidden glass-card-intense glass-hover glow-primary stagger-item ${
                   pkg.popular 
                     ? 'border-primary shadow-glass-intense scale-105' 
                     : 'border-border hover:border-primary/50'
@@ -199,7 +199,7 @@ const Services = () => {
                   </div>
                   <CardTitle className="text-2xl font-bold">{pkg.name}</CardTitle>
                   <div className="text-4xl font-bold text-primary mt-2">{pkg.price}</div>
-                  <p className="text-muted-foreground mt-2">{pkg.description}</p>
+                  <p className="text-muted-foreground mt-2 truncate">{pkg.description}</p>
                 </CardHeader>
 
                 <CardContent className="space-y-4">

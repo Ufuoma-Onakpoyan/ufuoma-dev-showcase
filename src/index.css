@@ -36,7 +36,11 @@ All colors MUST be HSL.
     --input: 0 0% 10%;
     --ring: 0 74% 42%; /* Soothing red focus ring */
 
-    --radius: 0.75rem;
+    --radius: 1rem;
+    --radius-sm: 0.5rem;
+    --radius-md: 0.75rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
 
     /* Business Package Colors */
     --package-basic: 142 76% 36%; /* Green for Basic */
@@ -151,6 +155,8 @@ All colors MUST be HSL.
     backdrop-filter: var(--blur-glass);
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: var(--shadow-glass);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
   }
   
   .glass-card-intense {
@@ -158,6 +164,8 @@ All colors MUST be HSL.
     backdrop-filter: var(--blur-glass-strong);
     border: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow: var(--shadow-glass-intense);
+    border-radius: var(--radius-xl);
+    padding: 2rem;
   }
   
   .glass-nav {

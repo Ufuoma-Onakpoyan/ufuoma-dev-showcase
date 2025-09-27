@@ -64,11 +64,11 @@ const Portfolio = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16 glass-card">
             <h1 className="text-5xl font-bold mb-6 gradient-text">
-              My 2025 Portfolio
+              My Portfolio
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               A showcase of innovative web applications, mobile apps, and digital solutions I've crafted 
-              for clients across various industries using modern 2025 technologies. Each project represents a unique 
+              for clients across various industries using modern technologies. Each project represents a unique 
               challenge solved with cutting-edge web and mobile technologies.
             </p>
           </div>

@@ -157,11 +157,11 @@ const Services = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center glass-card">
             <h1 className="text-5xl font-bold mb-6 gradient-text">
-              2025 Web & Mobile App Development Services
+              Web & Mobile App Development Services
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Transform your business with cutting-edge web and mobile solutions designed to drive growth, 
-              increase revenue, and provide exceptional user experiences across all platforms in 2025.
+              increase revenue, and provide exceptional user experiences across all platforms.
             </p>
           </div>
         </div>
@@ -171,9 +171,9 @@ const Services = () => {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16 glass-card">
-            <h2 className="text-4xl font-bold mb-6">Choose Your Perfect 2025 Package</h2>
+            <h2 className="text-4xl font-bold mb-6">Choose Your Perfect Package</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Transparent pricing with everything you need to succeed online in 2025
+              Transparent pricing with everything you need to succeed online
             </p>
           </div>
 

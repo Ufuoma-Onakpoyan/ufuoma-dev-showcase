@@ -26,11 +26,11 @@ const Contact = () => {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16 glass-card">
               <h1 className="text-5xl font-bold mb-6 gradient-text">
-                Let's Work Together in 2025
+                Let's Work Together
               </h1>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
                 Ready to bring your ideas to life? I'm here to help you create 
-                exceptional digital experiences with modern 2025 technologies. Let's discuss your project.
+                exceptional digital experiences with modern technologies. Let's discuss your project.
               </p>
             </div>
 
@@ -91,10 +91,10 @@ const Contact = () => {
               <div className="mt-16 text-center glass-card">
                 <Card className="glass-card-intense glass-hover magnetic">
                   <CardContent className="p-8">
-                    <h3 className="text-xl font-semibold mb-4">Let's Discuss Your 2025 Project</h3>
+                    <h3 className="text-xl font-semibold mb-4">Let's Discuss Your Project</h3>
                     <p className="text-muted-foreground leading-relaxed max-w-2xl mx-auto">
                       Whether you need a complete business website, modern e-commerce platform, cutting-edge web application, 
-                      or want to improve your existing online presence with 2025 technologies - I'm here to help. I offer free consultations 
+                      or want to improve your existing online presence with modern technologies - I'm here to help. I offer free consultations 
                       for new projects and respond to all inquiries within 24 hours. Let's discuss how we can transform 
                       your business with professional web solutions.
                     </p>

@@ -72,12 +72,12 @@ const Home = () => {
             </h1>
             <h2 className="hero-subtitle text-xl sm:text-2xl lg:text-3xl font-semibold mb-6 text-muted-foreground">
               <Sparkles className="inline h-6 w-6 mr-2 text-primary" />
-              2025 Full-Stack Web & Mobile App Developer
+              Full-Stack Web & Mobile App Developer
             </h2>
             <p className="hero-description text-lg sm:text-xl mb-8 max-w-2xl mx-auto leading-relaxed px-4 sm:px-0">
               I help businesses succeed across web and mobile platforms with cutting-edge solutions that drive growth, 
               increase revenue, and provide exceptional user experiences. From responsive websites to native mobile apps, 
-              I deliver complete digital ecosystems that transform your business in 2025.
+              I deliver complete digital ecosystems that transform your business.
             </p>
             <div className="hero-buttons flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="outline" size="lg" className="magnetic glass-card glass-hover border-white/20 text-white" asChild>
@@ -97,7 +97,7 @@ const Home = () => {
           <div className="flex justify-center">
             <div className="glass-card-intense rounded-3xl p-12 text-center max-w-2xl glass-card stagger-item">
               <h3 className="text-3xl font-bold mb-6 gradient-text">
-                Ready to Transform Your Business in 2025?
+                Ready to Transform Your Business?
               </h3>
               <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
                 Choose from our modern packages designed to help your business succeed across web and mobile platforms. 
@@ -105,7 +105,7 @@ const Home = () => {
               </p>
               <Button variant="hero" size="lg" className="magnetic glow-primary" asChild>
                 <Link to="/services">
-                  View 2025 Services & Pricing
+                  View Services & Pricing
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
@@ -118,9 +118,9 @@ const Home = () => {
       <section className="py-20 bg-card">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12 sm:mb-16 glass-card">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4 px-4">2025 Business Solutions That Drive Results</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 px-4">Business Solutions That Drive Results</h2>
             <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
-              Cutting-edge services designed to increase your revenue, improve efficiency, and accelerate growth in 2025
+              Cutting-edge services designed to increase your revenue, improve efficiency, and accelerate growth
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
@@ -145,14 +145,14 @@ const Home = () => {
         <div className="absolute inset-0 glass-nav opacity-20"></div>
         <div className="container mx-auto px-6 text-center relative z-10 glass-card">
           <h2 className="text-4xl font-bold mb-6 text-primary-foreground">
-            Ready to Transform Your Business in 2025?
+            Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
             Join successful businesses that have increased their revenue and growth with our modern web solutions
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="secondary" size="lg" className="magnetic" asChild>
-              <Link to="/services">View 2025 Pricing & Packages</Link>
+              <Link to="/services">View Pricing & Packages</Link>
             </Button>
             <Button variant="outline" size="lg" className="magnetic glass-card glass-hover border-white/20 text-white" asChild>
               <Link to="/contact">Get Free Consultation</Link>

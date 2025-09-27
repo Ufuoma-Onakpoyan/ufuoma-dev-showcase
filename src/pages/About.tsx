@@ -40,7 +40,7 @@ const About = () => {
               About Ufuoma O.
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Passionate 2025 software engineer and web developer with a keen eye for detail 
+              Passionate software engineer and web developer with a keen eye for detail 
               and a commitment to delivering exceptional digital experiences.
             </p>
           </div>
@@ -52,7 +52,7 @@ const About = () => {
                 <h2 className="text-3xl font-semibold mb-6">My Story</h2>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
-                    As a dedicated 2025 software engineer and web developer, I bring creativity 
+                    As a dedicated software engineer and web developer, I bring creativity 
                     and technical expertise to every project I undertake. My journey in 
                     technology has been driven by a passion for solving complex problems 
                     and creating intuitive digital solutions.
@@ -65,7 +65,7 @@ const About = () => {
                   <p>
                     My approach combines modern development practices with a deep understanding 
                     of user experience, ensuring that every application I build is not only 
-                    technically sound but also delightful to use in 2025 and beyond.
+                    technically sound but also delightful to use.
                   </p>
                 </div>
               </CardContent>
@@ -74,7 +74,7 @@ const About = () => {
             {/* Achievements */}
             <Card className="glass-card-intense glass-hover magnetic stagger-item">
               <CardContent className="p-8">
-                <h2 className="text-3xl font-semibold mb-6">2025 Key Achievements</h2>
+                <h2 className="text-3xl font-semibold mb-6">Key Achievements</h2>
                 <div className="space-y-4">
                   {achievements.map((achievement, index) => (
                     <div key={index} className="flex items-start space-x-3 stagger-item">
@@ -90,7 +90,7 @@ const About = () => {
           {/* Technologies */}
           <Card className="glass-card-intense glass-hover magnetic">
             <CardContent className="p-8">
-              <h2 className="text-3xl font-semibold mb-8 text-center">2025 Technologies & Tools</h2>
+              <h2 className="text-3xl font-semibold mb-8 text-center">Technologies & Tools</h2>
               <div className="flex flex-wrap gap-3 justify-center">
                 {technologies.map((tech, index) => (
                   <Badge
